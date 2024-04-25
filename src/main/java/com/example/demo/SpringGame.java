@@ -14,8 +14,14 @@ public class SpringGame {
 
     public static void main(String[] args) {
         try (var context = new AnnotationConfigApplicationContext(SpringGame.class)) {
+            //here we are getting beans which return GameRunner type
+            //and we have already added @Component annotation to the PacManGame class
+            //and above we set component scan to whole .demo package.
+            //in whole package spring scan and check that GameRunner is also set as bean using @Component annotation
+            //and from below line we are calling run method of GameRunner class.
             context.getBean(GameRunner.class).run();
 
+            //above we can observe that spring is auto-wiring the GameRunner constructor and taking PacMan Game as GamingConsole augment for constructor.
         }
     }
 }

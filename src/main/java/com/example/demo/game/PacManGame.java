@@ -3,6 +3,8 @@ package com.example.demo.game;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
+//by using this component annotation we said spring that create bean of this class as well
+//it will automatically create object of below class.
 @Component
 public class PacManGame implements GamingConsole{
     @Override
