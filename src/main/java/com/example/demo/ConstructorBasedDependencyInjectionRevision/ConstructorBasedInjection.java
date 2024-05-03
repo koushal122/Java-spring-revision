@@ -10,7 +10,7 @@ class YourBussiness{
    Dependency1 dependency1;
    Dependency2 dependency2;
 
-    //here @Autowired annotation is option
+    //here @Autowired annotation is optional
     @Autowired
     public YourBussiness(Dependency1 dependency1,Dependency2 dependency2){
         this.dependency1=dependency1;
